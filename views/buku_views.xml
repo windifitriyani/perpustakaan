@@ -20,7 +20,7 @@
     </record>
 
     <!-- buku form view -->
-    <record id="shosho_buku_view_form" model="ir.ui.view">
+    <record id="buku_view_form" model="ir.ui.view">
         <field name="name">Form Penambahan Buku</field>
         <field name="model">buku</field>
         <field name="arch" type="xml">
