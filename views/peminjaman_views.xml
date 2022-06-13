@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- peminjaman.buku tree view -->
+    <record id="peminjaman_buku_view_tree" model="ir.ui.view">
+        <field name="name">Peminjaman Buku</field>
+        <field name="model">peminjaman.buku</field>
+        <field name="arch" type="xml">
+            <tree>
+                <!-- Add your fields here -->
+                <field name="name"/>
+                <field name="peminjam"/>
+                <field name="tanggal_pinjam"/>
+                <field name="tanggal_kembali"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- peminjaman.buku form view -->
+    <record id="peminjaman_buku_view_form" model="ir.ui.view">
+        <field name="name">Daftar Peminjaman</field>
+        <field name="model">peminjaman.buku</field>
+        <field name="arch" type="xml">
+            <form string="">
+                <sheet>
+                    <group>
+                        <!-- Add your fields here -->
+                        <field name="name"/>
+                        <field name="peminjam"/>
+                        <field name="tanggal_pinjam"/>
+                        <field name="tanggal_kembali"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- peminjaman.buku action window -->
+    <record id="peminjaman_buku_action" model="ir.actions.act_window">
+        <field name="name">Pinjam Buku</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">peminjaman.buku</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <!-- This Menu Item must have a parent and an action -->
+    <menuitem
+        id="peminjaman_buku_menu_act"
+        name="Pinjam Buku"
+        parent="peminjaman_buku_menu_categ"
+        action="peminjaman_buku_action"
+        sequence="20"/>
+</odoo>

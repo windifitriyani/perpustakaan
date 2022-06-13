@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_buku,access.buku,model_buku,,1,1,1,1
+access_peminjaman_buku,access.peminjaman.buku,model_peminjaman_buku,,1,1,1,1
+access_pengembalian_buku,access.pengembalian.buku,model_pengembalian_buku,,1,1,1,1
